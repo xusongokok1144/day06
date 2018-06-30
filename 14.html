@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* :last-child 选择父元素下的最后一个子元素
+            ：first-child  选择父元素下的第一个子元素
+            not（：last-child） 不选择父元素下的最后一个元素
+         */
+        .center{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .parent{
+            width: 600px;
+            overflow: hidden;
+            background: pink;
+            
+            border: 1px solid #333;
+
+        }
+        .parent>div{
+            box-sizing: border-box;
+            width: 25%;
+            height: 300px;
+            float: left;
+        }
+        .parent>div:not(:last-child){
+            border-right: 1px solid #333; 
+        }
+    </style>
+</head>
+<body>
+    <div class="parent center">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
